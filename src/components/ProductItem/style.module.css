@@ -1,0 +1,13 @@
+.item{
+    border: 2px solid black;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 300px auto 40px;
+    gap: 10px;
+}
+
+.item img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
