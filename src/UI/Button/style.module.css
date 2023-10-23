@@ -1,0 +1,16 @@
+.button{
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 5px 10 px;
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover{
+    box-shadow: 5px 5px 10px black;
+}

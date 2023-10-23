@@ -6,13 +6,13 @@ import Container from '../../UI/Container'
 
 export default function ProductsPage() {
 
-    const products = useSelector(({products}) => products)
+    const {status, list} = useSelector(({products}) => products)
 
   return (
     <Container>
         <div className={s.container}>
             {
-                products.map(product => <ProductItem key={product.id} {...product}/>)
+                list.map(product => <ProductItem key={product.id} {...product}/>)
             }
         </div>
     </Container>

@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import s from './style.module.css'
 import ByCondition from '../../UI/ByCondition'
 import { useCard } from '../hooks/useCard'
+import Button from '../../UI/Button'
 
 export default function CardCalculation(id) {
     const dispatch = useDispatch()
@@ -14,7 +15,7 @@ export default function CardCalculation(id) {
   return (
     <div className={s.container}>
          <ByCondition condition={card.length !== 0}>
-              {<button onClick={() => dispatch(clearAction(id))}>Alle Artikel entfernen</button>}
+          <Button onClick={() => dispatch(clearAction(id))}>Alle Artikel entfernen</Button>
               <p>{totalSum}</p>
         </ByCondition>
         

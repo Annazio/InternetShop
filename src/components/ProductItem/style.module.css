@@ -2,7 +2,7 @@
     border: 2px solid black;
     padding: 10px;
     display: grid;
-    grid-template-rows: 300px auto 40px;
+    grid-template-rows: 300px 1fr auto;
     gap: 10px;
 }
 
@@ -10,4 +10,9 @@
     object-fit: contain;
     height: 100%;
     width: 100%;
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

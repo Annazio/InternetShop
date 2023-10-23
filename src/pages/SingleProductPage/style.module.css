@@ -1,0 +1,21 @@
+.product{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product img{
+    width: 100%;
+}
+
+.product .info{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+}

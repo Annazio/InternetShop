@@ -1,9 +1,16 @@
-import { loadProductsAction } from "../reducer/productsReducer";
+import { loadProductsAction, changeStatusAction } from "../reducer/productsReducer";
+
+
 
 export const fetchProducts = async (dispatch) => {
-    console.log('start');
-    const resp = await fetch('https://fakestoreapi.com/products/')
-    const data = await resp.json();
-    console.log(data);
-    dispatch(loadProductsAction(data)); 
-} 
+    dispatch(changeStatusAction('loading'));
+    const resp = await fetch ('https://fakestoreapi.com/products/')
+    const result = await resp.text();
+
+    if(result !== ''){
+        const data = JSON.parse(result);
+        dispatch(loadProductsAction(data)); 
+    } else{
+    dispatch(changeStatusAction('error'));
+    }
+}

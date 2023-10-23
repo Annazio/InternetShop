@@ -2,6 +2,7 @@ import React from 'react'
 import s from './style.module.css'
 import { useDispatch } from 'react-redux'
 import { decrAction, incrAction } from '../../store/reducer/cardReducer';
+import Button from '../../UI/Button';
 
 export default function CardItem({id, image, title, count, price}) {
   const dispatch = useDispatch();
@@ -11,8 +12,8 @@ export default function CardItem({id, image, title, count, price}) {
         <p>{title}</p>
         <p>{price} X {count} = {price * count} €</p>
         <div className={s.count_btns}>
-            <button onClick={() => dispatch(incrAction(id))}>+</button>
-            <button onClick={() => dispatch(decrAction(id))}>-</button>
+            <Button onClick={() => dispatch(incrAction(id))}>+</Button>
+            <Button onClick={() => dispatch(decrAction(id))}>-</Button>
         </div>
         
     </div>
